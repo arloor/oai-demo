@@ -1,1 +1,2 @@
-virEnv
+venv
+.vscode/launch.json

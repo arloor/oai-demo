@@ -1,5 +1,6 @@
 from azure.identity import DefaultAzureCredential, get_bearer_token_provider
 from openai import AzureOpenAI
+import os
 
 # token_provider = get_bearer_token_provider(
 #     DefaultAzureCredential(), "https://cognitiveservices.azure.com/.default"
@@ -7,8 +8,8 @@ from openai import AzureOpenAI
 
 client = AzureOpenAI(
     api_version="2024-02-15-preview",
-    azure_endpoint="https://xxxx.openai.azure.com/",
-    api_key="xxxx",
+    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
     # azure_ad_token_provider=token_provider
 )
 

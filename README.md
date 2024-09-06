@@ -1,5 +1,0 @@
-```bash
-python3 -m venv virEnv
-source virEnv/bin/activate
-pip3 install -r requirements.txt
-```
